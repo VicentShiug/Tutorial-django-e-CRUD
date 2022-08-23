@@ -1,0 +1,14 @@
+<h1>Olá mundo, essas são as nossas tarefas </h1>
+<a href="/add"><button>Adicionar</button></a>
+{% for lista in listas %}
+<ul>
+    <li>{{ lista }}
+        <a href="/details/{{lista.id}}"><button> ver </button></a>
+
+        <a href="/update/{{lista.id}}"><button> Editar </button></a>
+
+        <a href="/delete/{{lista.id}}"onclick= "return confirm('Tem certeza de que deseja deletar este item?')"><button> deletar </button></a>
+
+    </li>
+</ul>
+{% endfor %}
